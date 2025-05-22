@@ -19,12 +19,13 @@
 #     print("checked "+ str(111780 + n))
 #     n += 1
 #     time.sleep(0.1)
-
-
 import json
+import time
 import itertools
 
-with open("skins.json", "r") as f:
+start = time.time()
+
+with open("skins2.json", "r") as f:
     data = json.load(f)
 
 filtered_skins = []
@@ -44,11 +45,14 @@ result = {"tradeUps": tradeups}
 
 print(f"Generated {len(result['tradeUps'])} trade-ups.")
 
+print(f"Time taken: {time.time() - start:.2f} seconds")
+
 # with open("tradeups.json", "w") as out_f:
 #     json.dump(result, out_f, indent=4)
 
-import json
-import time
+
+
+start = time.time()
 
 # with open("tradeups.json", "r") as f:
 #     result = json.load(f)
@@ -56,6 +60,8 @@ import time
 # After generating the tradeUps, we can calculate contract probabilities.
 import requests
 from collections import Counter
+
+
 
 headers = {
     "Host": "api.tradeupspy.com",
@@ -120,8 +126,36 @@ for t in result["tradeUps"]:
     })
 
 print("DONE")
+print(f"Time taken for calculations: {time.time() - start:.2f} seconds")
 # Optionally, save results
-with open("tradeup_calculations.json", "w") as outf:
-    json.dump(tradeup_calculations, outf, indent=4)
+with open("tradeup_calculations_short.json", "w") as outf:
+    json.dump(tradeup_calculations[:5], outf, indent=4)
 
-# ...existing code...
+start = time.time()
+
+profitable_calculations = []
+
+for contract in tradeup_calculations:
+    # Sum input cost (the 10 skins)
+    total_input_cost = sum(item["price"] for item in contract["tradeUp"])
+    # Calculate expected value of the outputs
+    expected_output_value = sum(o["probability"] * o["price"] for o in contract["outputs"])
+    # Compute profit
+    profit = expected_output_value - total_input_cost
+
+    # Only store profitable contracts
+    if profit > -0.2:
+        profitable_calculations.append({
+            "tradeUp": contract["tradeUp"],
+            "totalInputCost": total_input_cost,
+            "expectedOutputValue": expected_output_value,
+            "profit": profit
+        })
+
+print(f"Number of profitable contracts: {len(profitable_calculations)}")
+
+# Write profitable contracts to a file
+with open("profitable_tradeups.json", "w") as outf:
+    json.dump(profitable_calculations, outf, indent=4)
+
+print(f"Time taken for profitability calculations: {time.time() - start:.2f} seconds")

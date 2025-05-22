@@ -37,7 +37,7 @@ for s in data["skinList"]:
         })
 
 tradeups = []
-for combo in itertools.combinations(filtered_skins, 10):
+for combo in itertools.combinations_with_replacement(filtered_skins, 10):
     tradeups.append({"skins": list(combo)})
 
 result = {"tradeUps": tradeups}
@@ -110,7 +110,8 @@ for t in result["tradeUps"]:
             calculation.append({
                 "name": skin_out["name"],
                 "collectionId": c_id,
-                "probability": prob
+                "probability": prob,
+                "price": skin_out["priceFT"],
             })
 
     tradeup_calculations.append({
@@ -118,6 +119,7 @@ for t in result["tradeUps"]:
         "outputs": calculation
     })
 
+print("DONE")
 # Optionally, save results
 with open("tradeup_calculations.json", "w") as outf:
     json.dump(tradeup_calculations, outf, indent=4)

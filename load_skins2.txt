@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2025.3.4" exportTime="Wed May 14 18:42:33 CEST 2025">
+  <item>
+    <time>Wed May 14 18:42:17 CEST 2025</time>
+    <url><![CDATA[https://api.tradeupspy.com/api/skins/search/2?stattrak=false&rarity=5&condition=fn&collection=-1&skinname=%20&filter=0]]></url>
+    <host ip="51.44.231.64">api.tradeupspy.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/api/skins/search/2?stattrak=false&rarity=5&condition=fn&collection=-1&skinname=%20&filter=0]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC9hcGkvc2tpbnMvc2VhcmNoLzI/c3RhdHRyYWs9ZmFsc2UmcmFyaXR5PTUmY29uZGl0aW9uPWZuJmNvbGxlY3Rpb249LTEmc2tpbm5hbWU9JTIwJmZpbHRlcj0wIEhUVFAvMS4xDQpIb3N0OiBhcGkudHJhZGV1cHNweS5jb20NClNlYy1DaC1VYS1QbGF0Zm9ybTogIldpbmRvd3MiDQpBY2NlcHQtTGFuZ3VhZ2U6IHBsLVBMLHBsO3E9MC45DQpBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24sIHRleHQvcGxhaW4sICovKg0KU2VjLUNoLVVhOiAiTm90LkEvQnJhbmQiO3Y9Ijk5IiwgIkNocm9taXVtIjt2PSIxMzYiDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTM2LjAuMC4wIFNhZmFyaS81MzcuMzYNClNlYy1DaC1VYS1Nb2JpbGU6ID8wDQpPcmlnaW46IGh0dHBzOi8vd3d3LnRyYWRldXBzcHkuY29tDQpTZWMtRmV0Y2gtU2l0ZTogc2FtZS1zaXRlDQpTZWMtRmV0Y2gtTW9kZTogY29ycw0KU2VjLUZldGNoLURlc3Q6IGVtcHR5DQpSZWZlcmVyOiBodHRwczovL3d3dy50cmFkZXVwc3B5LmNvbS8NCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZSwgYnINClByaW9yaXR5OiB1PTEsIGkNCkNvbm5lY3Rpb246IGtlZXAtYWxpdmUNCg0K]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>

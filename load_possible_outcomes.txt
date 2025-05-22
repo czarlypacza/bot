@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2025.3.4" exportTime="Wed May 14 18:43:13 CEST 2025">
+  <item>
+    <time>Wed May 14 18:42:51 CEST 2025</time>
+    <url><![CDATA[https://api.tradeupspy.com/api/skins?inputrarity=5&collection=0]]></url>
+    <host ip="51.44.231.64">api.tradeupspy.com</host>
+    <port>443</port>
+    <protocol>https</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/api/skins?inputrarity=5&collection=0]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC9hcGkvc2tpbnM/aW5wdXRyYXJpdHk9NSZjb2xsZWN0aW9uPTAgSFRUUC8xLjENCkhvc3Q6IGFwaS50cmFkZXVwc3B5LmNvbQ0KU2VjLUNoLVVhLVBsYXRmb3JtOiAiV2luZG93cyINCkFjY2VwdC1MYW5ndWFnZTogcGwtUEwscGw7cT0wLjkNCkFjY2VwdDogYXBwbGljYXRpb24vanNvbiwgdGV4dC9wbGFpbiwgKi8qDQpTZWMtQ2gtVWE6ICJOb3QuQS9CcmFuZCI7dj0iOTkiLCAiQ2hyb21pdW0iO3Y9IjEzNiINClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzYuMC4wLjAgU2FmYXJpLzUzNy4zNg0KU2VjLUNoLVVhLU1vYmlsZTogPzANCk9yaWdpbjogaHR0cHM6Ly93d3cudHJhZGV1cHNweS5jb20NClNlYy1GZXRjaC1TaXRlOiBzYW1lLXNpdGUNClNlYy1GZXRjaC1Nb2RlOiBjb3JzDQpTZWMtRmV0Y2gtRGVzdDogZW1wdHkNClJlZmVyZXI6IGh0dHBzOi8vd3d3LnRyYWRldXBzcHkuY29tLw0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlLCBicg0KUHJpb3JpdHk6IHU9MSwgaQ0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KDQo=]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>
